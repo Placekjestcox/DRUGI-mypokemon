@@ -95,7 +95,7 @@ const PokemonDetail = () => {
         </div>
       </div>
       <div className="Description">
-        <h3>Description</h3>
+        <p id="Desc">Description</p>
         {pokemon ? <p>{pokemon.description}</p> : <p>Loading...</p>}
       </div>
       <PhysicalAttributes pokemon={pokemon} />

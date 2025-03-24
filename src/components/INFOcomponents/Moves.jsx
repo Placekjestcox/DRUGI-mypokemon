@@ -15,7 +15,7 @@ const Moves = ({ pokemon }) => {
 
   return (
     <div className="Moves">
-      <h3>Moves</h3>
+      <p>Moves</p>
       <table className="moves-table">
         <tbody>
           {displayedMoves.map((group, index) => (

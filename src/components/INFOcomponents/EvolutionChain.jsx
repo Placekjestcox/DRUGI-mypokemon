@@ -20,7 +20,7 @@ const EvolutionChain = ({ pokemonId }) => {
               const speciesUrlParts = evo.species.url.split("/");
               const speciesId = speciesUrlParts[speciesUrlParts.length - 2]; 
               chain.push({
-              name: evo.species.name.charAt(0).toUpperCase() + evo.species.name.slice(1), // Zmiana na wielką literę
+              name: evo.species.name.charAt(0).toUpperCase() + evo.species.name.slice(1),
               id: speciesId, 
               });
               evo = evo.evolves_to.length > 0 ? evo.evolves_to[0] : null;
@@ -41,7 +41,7 @@ const EvolutionChain = ({ pokemonId }) => {
 
   return (
     <div className="EvolutionChain">
-      <h3>Evolution Chain</h3>
+      <p id="Evo">Evolution Chain</p>
       <div className="evolution-images">
         {evolutionChain.map((evolution, index) => (
           <React.Fragment key={evolution.id}>
@@ -55,7 +55,7 @@ const EvolutionChain = ({ pokemonId }) => {
               />
               <p>{evolution.name}</p>
             </div>
-            {index < evolutionChain.length - 1 && <span id="strzalka"> &gt; </span>} 
+            {index < evolutionChain.length - 1 && <span id="arrow"> &gt; </span>} 
           </React.Fragment>
         ))}
       </div>
